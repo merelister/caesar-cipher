@@ -1,1 +1,1 @@
-void encryptText() {}
+void decryptText() {}
