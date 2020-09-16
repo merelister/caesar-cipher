@@ -7,23 +7,24 @@ class caesarCipher {
 	public static void main(String[] args) {
 		System.out.println("What is your message?");
 		Scanner in = new Scanner(System.in);
-		String message = in.nextLine().toUpperCase();
+		String message = in.nextLine();
 
 		System.out.println("Would you like to encrypt [1] or decrypt [2] your message?");
 		try {
 			int choice = in.nextInt();
 
 			if (choice==1) 
-				encryptText(message);
+				System.out.println(encryptText(message));
 			else if (choice==2)
-				decryptText(message);
+				System.out.println(decryptText(message));
 		} catch (InputMismatchException E) {
 			System.out.println("Invalid option."); //program ends
 		}
 
 	}
 
-	public static void encryptText(String s) {
+	public static String encryptText(String s) {
+		s = s.toUpperCase();
 		String out = "";
 		for (int i=0; i < s.length(); i++) {
 			int c = (int)s.charAt(i);
@@ -35,11 +36,12 @@ class caesarCipher {
 			out = out + (char)c;
 
 		}
-		System.out.println(out);
+		return out;
 
 	}	
 
-	public static void decryptText(String s) {
+	public static String decryptText(String s) {
+		s = s.toUpperCase();
 		String out = "";
 		for (int i=0; i < s.length(); i++ ) {
 			int c = (int)s.charAt(i);
@@ -49,7 +51,7 @@ class caesarCipher {
 			}
 			out = out + (char)c;
 		}
-		System.out.println(out);
+		return out;
 	}
 
 }
