@@ -3,8 +3,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class caesarCipher {
-	// change to push to origin
 
+	// simple change for video
 	public static void main(String[] args) {
 		System.out.println("What is your message?");
 		Scanner in = new Scanner(System.in);
